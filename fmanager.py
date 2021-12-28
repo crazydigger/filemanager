@@ -1,11 +1,12 @@
+import os
+import platform
 
-
-Account = 0
+Current_dir = os.getcwd()
 history = []
 while True:
-    print('денег на счету:' + str(Account))
+    print('Текущая папка:' + Current_dir)
     print('1. пополнение счета')
-    print('2. покупка')
+    print('2. информацияоб ОС')
     print('3. история покупок')
     print('4. выход')
 
