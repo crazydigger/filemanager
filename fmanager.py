@@ -15,15 +15,13 @@ while True:
         sum = input('на сколько пополнить счет')
         Account += int(sum)
     elif choice == '2':
-        sum = int(input('стоимость покупки?'))
-        if (sum <= Account):
-            print('Денег достаточно')
-            break
-        else:
-            print('недостаточно средств!')
-            break
-            good = input('название товара?')
-            history.append(good + str(sum))
+        print(platform.system())
+
+        print(platform.release())
+
+
+
+
     elif choice == '3':
         print(history)
     elif choice == '4':
