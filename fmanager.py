@@ -9,6 +9,7 @@ while True:
     print('2. информация об ОС')
     print('l. просмотр содержимого рабочей директории;')
     print("d.посмотреть только папки;")
+    print("r.удалить (файл/папку);")
     print("f.посмотреть только файлы;")
 
     print('7.играть в викторину;')
@@ -37,6 +38,17 @@ while True:
         for d in os.listdir(os.getcwd()):
             if os.path.isfile(d):
                 print('file::::::::::::::::::::::::::::',d)
+                lif
+    elif choice == 'r':
+
+                        f = input('введите имя файла или папки для удаления:')
+                        while input('1 - подтвердить 0- отменить'):
+                            print('будет удален файл!!!!!!!!!!',f)
+                        if os.path.isdir(f):
+                            os.rmdir(f)
+                        else:
+                            os.remove(f)
+
 
 
 
