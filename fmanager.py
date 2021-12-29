@@ -1,6 +1,6 @@
 import os, path
 import platform
-
+import victory
 Current_dir = os.getcwd()
 history = []
 while True:
@@ -26,6 +26,7 @@ while True:
         print(platform.release())
     elif choice == '7':
         print('Викторина!')
+        victory.victorina()
     elif choice == '8':
         print('Банковский счет!')
     elif choice == 'l':
