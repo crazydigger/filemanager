@@ -8,9 +8,10 @@ while True:
     print('Текущая папка:' + Current_dir)
     print('1. пополнение счета')
     print('2. информация об ОС')
-    print('l. просмотр содержимого рабочей директории;')
+    print('list. просмотр содержимого рабочей директории;')
     print("d.посмотреть только папки;")
-    print("r.удалить (файл/папку);")
+    print("remove.удалить (файл/папку);")
+    print("C.reate.Создатьпапку);")
     print("f.посмотреть только файлы;")
 
     print('7.играть в викторину;')
@@ -30,6 +31,7 @@ while True:
         victory.victorina()
     elif choice == '8':
         print('Банковский счет!')
+        bank.bank()
     elif choice == 'l':
         print(os.listdir())
     elif choice == 'd':
@@ -43,13 +45,21 @@ while True:
     elif choice == 'r':
 
                         f = input('введите имя файла или папки для удаления:')
-                        while input('1 - подтвердить 0- отменить'):
+                        while input('1 - подтвердить 0- отменить')=='1':
                             print('будет удален файл!!!!!!!!!!',f)
                         if os.path.isdir(f):
                             os.rmdir(f)
                         else:
                             os.remove(f)
+    elif choice == 'c':
 
+                        f = input('введите имя файла или папки для Создания:')
+                        #while input('1 - подтвердить 0- отменить')=='1':
+                        #print('будет удален файл!!!!!!!!!!',f)
+                        #if os.path.isdir(f):
+                        os.mkdir(f)
+                        # else:
+                        #     os.remove(f)
 
 
 
