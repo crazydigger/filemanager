@@ -1,6 +1,7 @@
 import os, path
 import platform
 import victory
+import bank
 Current_dir = os.getcwd()
 history = []
 while True:
