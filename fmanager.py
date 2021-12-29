@@ -6,8 +6,10 @@ history = []
 while True:
     print('Текущая папка:' + Current_dir)
     print('1. пополнение счета')
-    print('2. информацияоб ОС')
+    print('2. информация об ОС')
     print('3. история покупок')
+    print('7.играть в викторину;')
+    print('8.мой банковский счет;')
     print('4. выход')
 
     choice = input('Выберите пункт меню')
@@ -18,6 +20,10 @@ while True:
         print(platform.system())
 
         print(platform.release())
+    elif choice == '7':
+        print('Викторина!')
+    elif choice == '8':
+        print('Банковский счет!')
 
 
 
