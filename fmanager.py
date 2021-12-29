@@ -1,4 +1,4 @@
-import os
+import os, path
 import platform
 
 Current_dir = os.getcwd()
@@ -29,6 +29,14 @@ while True:
         print('Банковский счет!')
     elif choice == 'l':
         print(os.listdir())
+    elif choice == 'd':
+        for d in os.listdir(os.getcwd()):
+            if os.path.isdir(d):
+                print('dir::::::::::::::::::::::::::::',d)
+    elif choice == 'f':
+        for d in os.listdir(os.getcwd()):
+            if os.path.isfile(d):
+                print('file::::::::::::::::::::::::::::',d)
 
 
 
