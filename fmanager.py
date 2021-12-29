@@ -38,7 +38,6 @@ while True:
         for d in os.listdir(os.getcwd()):
             if os.path.isfile(d):
                 print('file::::::::::::::::::::::::::::',d)
-                lif
     elif choice == 'r':
 
                         f = input('введите имя файла или папки для удаления:')
