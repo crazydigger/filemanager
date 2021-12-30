@@ -5,7 +5,7 @@ import bank
 
 Current_dir = os.getcwd()
 history = []
-
+Account = 0
 
 def creator():
     print('создатель программы:Рома Боровиков(c)(r)')
