@@ -26,9 +26,10 @@
 # выход из программы
 # При выполнении задания можно пользоваться любыми средствами
 # Для реализации основного меню можно использовать пример ниже или написать свой
+Account = 0
+    history = ['покупка1,500']
 def bank():
-    Account = 0
-    history = []
+
     while True:
         print('денег на счету:' + str(Account))
         print('1. пополнение счета')
@@ -49,7 +50,7 @@ def bank():
                 print('недостаточно средств!')
                 break
                 good = input('название товара?')
-                history.append(good + str(sum))
+                history.append(good + ','+str(sum))
         elif choice == '3':
             print(history)
         elif choice == '4':
