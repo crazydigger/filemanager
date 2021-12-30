@@ -11,11 +11,11 @@ def victorina():
         print(names[i], dates[i])
         n = names[i].replace('', '')
         d = dates[i].replace('', '')
-        print('name!!!!!', n)
+        #print('name!!!!!', n)
         #print('date=====', d)
         famous_persons = {n: d}
         # famous_persons(names[i],dates[i])
-    print(famous_persons)
+    #print(famous_persons)
 
     def long_date(m):
         months = {'01': 'января', '02': 'февраля', '03': 'марта', '04': 'апреля', '05': 'мая', '06': 'июня',
@@ -31,14 +31,14 @@ def victorina():
     for i in range(1, 9):
         print(long_date('0' + str(i)))
 
-    while (input('повторим?-1нет-0'))=='1':
+    while (input('Играем?-Да-1нет-0'))=='1':
         for i in range(len(names)):
             famous_persons = famous_persons.fromkeys(names)
             print(names[i], dates[i])
             n = names[i].replace('', '')
             d = dates[i].replace('', '')
             print('name!!!!!', n)
-            print('date=====', d)
+            #print('date=====', d)
             famous_persons = {n: d}
             # famous_persons(names[i],dates[i])
         print(famous_persons)
