@@ -12,7 +12,7 @@ def victorina():
         n = names[i].replace('', '')
         d = dates[i].replace('', '')
         print('name!!!!!', n)
-        print('date=====', d)
+        #print('date=====', d)
         famous_persons = {n: d}
         # famous_persons(names[i],dates[i])
     print(famous_persons)
