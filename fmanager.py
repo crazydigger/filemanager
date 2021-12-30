@@ -1,4 +1,5 @@
 import os, path
+from path import *
 import platform
 import victory
 import bank
