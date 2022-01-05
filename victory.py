@@ -2,6 +2,16 @@ from random import randint
 import random
 
 
+def long_date(m):
+    months = {'01': 'января', '02': 'февраля', '03': 'марта', '04': 'апреля', '05': 'мая', '06': 'июня',
+              '07': 'июля', '08': 'августа', '09': 'сентября', '10': 'октября', '11': 'ноября', '12': 'декабря'}
+    result = ''
+    try:
+        result = months[m]
+    except:
+        result = ''
+
+    return result
 def victorina():
     names = "а.с.пушкин,л.н.толстой,фмдостоевский,мюлермонтов,апчехов".split(',')
     dates = '9.091928,28.081828,11111921,27061941,29011960'.split(',')
@@ -17,31 +27,22 @@ def victorina():
         # famous_persons(names[i],dates[i])
     #print(famous_persons)
 
-    def long_date(m):
-        months = {'01': 'января', '02': 'февраля', '03': 'марта', '04': 'апреля', '05': 'мая', '06': 'июня',
-                  '07': 'июля', '08': 'августа', '09': 'сентября', '10': 'октября', '11': 'ноября', '12': 'декабря'}
-        result = ''
-        try:
-            result = months[m]
-        except:
-            result = ''
 
-        return result
 
     for i in range(1, 9):
         print(long_date('0' + str(i)))
-
-    while (input('Играем?-Да-1нет-0'))=='1':
-        for i in range(len(names)):
-            famous_persons = famous_persons.fromkeys(names)
-            print(names[i], dates[i])
-            n = names[i].replace('', '')
-            d = dates[i].replace('', '')
-            print('name!!!!!', n)
-            #print('date=====', d)
-            famous_persons = {n: d}
-            # famous_persons(names[i],dates[i])
-        print(famous_persons)
+if __name__=='__main__':
+        while (input('Играем?-Да-1нет-0'))=='1':
+            for i in range(len(names)):
+                famous_persons = famous_persons.fromkeys(names)
+                print(names[i], dates[i])
+                n = names[i].replace('', '')
+                d = dates[i].replace('', '')
+                print('name!!!!!', n)
+                #print('date=====', d)
+                famous_persons = {n: d}
+                # famous_persons(names[i],dates[i])
+            print(famous_persons)
 
         count_right = 0
         for i in range(len(names)):
