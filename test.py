@@ -7,4 +7,4 @@ numbers = [1, 2, 3, 4, ]
 def test_map():
     m_result = list(map(lambda x: x % 2 == 0, numbers))
     print('!!!!!!!!!!!!!!!!!!!!!',m_result)
-    assert m_result==[2,4]
+    assert m_result==[False, True, False, True]
