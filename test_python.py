@@ -12,9 +12,12 @@ def test_sqrt():
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # returns True if number is even
 
-even_numbers_iterator = filter(lambda x:x%2==0, numbers)
+numbers = [1, 2, 3, 4, ]
+def test_filter():
+    assert list(filter(lambda x: x % 2 == 0, numbers))==[2,4]
+    assert list(filter(lambda x: x % 2 == 0, numbers)) == [2, 4]
 
+def test_sorted():
+        assert sorted(numbers) == [1, 2, 3, 4, ]
 
-print('Filter test!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-print(even_numbers_iterator)
 
