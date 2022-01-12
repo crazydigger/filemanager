@@ -1,4 +1,5 @@
 import os, path
+import time
 from path import *
 import platform
 import victory
@@ -10,16 +11,22 @@ Account = 0
 
 
 def creator():
+
     return 'создатель программы:Рома Боровиков(c)(r)'
 
 
-# if __name__=="__Main____":
+
 def f_manager():
-    print('Консольный файловый менеджер на питоне')
-    return 'Консольный файловый менеджер на питоне'
+
+    if __name__ == "__main__":
+
+        choice='4'
     while True:
+        print('Консольный файловый менеджер на питоне!!!!!!!!!!!!!!!!!!!!!')
+            # return 'Консольный файловый менеджер на питоне'
+        choice=input('Выберите пункт меню')
         print('Текущая папка:' + Current_dir)
-        creator()
+        print(creator())
         print('1. пополнение счета')
         print('2. информация об ОС')
         print('list. просмотр содержимого рабочей директории;')
@@ -34,7 +41,7 @@ def f_manager():
         print('8.мой банковский счет;')
         print('4. выход')
 
-    choice = input('Выберите пункт меню')
+        choice = input('Выберите пункт меню')
     if choice == '1':
         sum = input('на сколько пополнить счет')
         Account += int(sum)
@@ -83,10 +90,13 @@ def f_manager():
     elif choice == '3':
         print(history)
     elif choice == '4':
-        os.exit(0)
+        exit(0)
     elif choice == 's':
         print('Сохраняем содержимое в dir.txt!!!!!!!!!')
-        sleep(1)
+        time.sleep(1)
+        with open(('dir.txt','wt')) as file:
+            for name in os.listdir(os.getcwd()):
+                file.write(name)
     else:
             print('Неверный пункт меню')
 
@@ -94,5 +104,5 @@ def f_manager():
 print('Неверный пункт меню')
 
 
-if __name__ != '__Main':
-    f_manager()
+#if __name__ != '__Main':
+f_manager()
