@@ -11,7 +11,8 @@ Account = 0
 def creator():
     return 'создатель программы:Рома Боровиков(c)(r)'
 
-if __name__=="__Main____":
+#if __name__=="__Main____":
+def fmanager():
     while True:
         print('Текущая папка:' + Current_dir)
         creator()
