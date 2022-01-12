@@ -8,11 +8,15 @@ Current_dir = os.getcwd()
 history = []
 Account = 0
 
+
 def creator():
     return 'создатель программы:Рома Боровиков(c)(r)'
 
-#if __name__=="__Main____":
+
+# if __name__=="__Main____":
 def fmanager():
+    print('Консольный файловый менеджер на питоне')
+    return 'Консольный файловый менеджер на питоне'
     while True:
         print('Текущая папка:' + Current_dir)
         creator()
@@ -36,7 +40,7 @@ def fmanager():
     elif choice == '2':
         print(platform.system())
     elif choice == '5':
-       creator()
+        creator()
     elif choice == '7':
         print('Викторина!')
         victory.victorina()
