@@ -14,7 +14,7 @@ def creator():
 
 
 # if __name__=="__Main____":
-def fmanager():
+def f_manager():
     print('Консольный файловый менеджер на питоне')
     return 'Консольный файловый менеджер на питоне'
     while True:
