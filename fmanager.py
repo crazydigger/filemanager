@@ -28,6 +28,7 @@ def f_manager():
         print("remove.удалить (файл/папку);")
         print("C.reate.Создатьпапку);")
         print("f.посмотреть только файлы;")
+        print("s.сохранить содержимое рабочей директории в файл")
 
         print('7.играть в викторину;')
         print('8.мой банковский счет;')
@@ -83,8 +84,14 @@ def f_manager():
         print(history)
     elif choice == '4':
         os.exit(0)
+    elif choice == 's':
+        print('Сохраняем содержимое в dir.txt!!!!!!!!!')
+        sleep(1)
     else:
-        print('Неверный пункт меню')
+            print('Неверный пункт меню')
+
+
+print('Неверный пункт меню')
 
 
 if __name__ != '__Main':
