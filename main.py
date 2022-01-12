@@ -1,4 +1,3 @@
-from fmanager import f_manager
-fmanager
+import fmanager
 def test_f_manager():
-    assert f_manager()=='Консольный файловый менеджер на питоне'
+    assert fmanager.f_manager() == 'Консольный файловый менеджер на питоне'

@@ -85,3 +85,7 @@ def f_manager():
         os.exit(0)
     else:
         print('Неверный пункт меню')
+
+
+if __name__ != '__Main':
+    f_manager()
