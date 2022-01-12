@@ -23,8 +23,6 @@ def f_manager():
         choice='4'
     while True:
         print('Консольный файловый менеджер на питоне!!!!!!!!!!!!!!!!!!!!!')
-            # return 'Консольный файловый менеджер на питоне'
-        choice=input('Выберите пункт меню')
         print('Текущая папка:' + Current_dir)
         print(creator())
         print('1. пополнение счета')
@@ -40,8 +38,14 @@ def f_manager():
         print('7.играть в викторину;')
         print('8.мой банковский счет;')
         print('4. выход')
+            # return 'Консольный файловый менеджер на питоне'
+        choice=input('Выберите пункт меню')
+
+
 
         choice = input('Выберите пункт меню')
+        if choice=='4':
+            exit(4)
     if choice == '1':
         sum = input('на сколько пополнить счет')
         Account += int(sum)
@@ -90,7 +94,8 @@ def f_manager():
     elif choice == '3':
         print(history)
     elif choice == '4':
-        exit(0)
+        exit(4)
+        print('выход!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     elif choice == 's':
         print('Сохраняем содержимое в dir.txt!!!!!!!!!')
         time.sleep(1)
@@ -104,5 +109,6 @@ def f_manager():
 print('Неверный пункт меню')
 
 
-#if __name__ != '__Main':
+#if __name__ == '__Main':
+print('in main',__name__)
 f_manager()
