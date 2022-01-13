@@ -14,7 +14,6 @@ def creator():
 #choice=input('Выберите пункт меню')
 
 creator()
-
 while choice!='4':
 
 

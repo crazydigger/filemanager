@@ -33,7 +33,10 @@ def bank():
     Account = 0
     if os.path.exists('account.txt'):
         with open('account.txt','rt')as file:
-            account=(file.read())
+            Account=int(file.read())
+            print('увас'+str(Account)+'руб!')
+            if Account==0:
+                print('пополните счет!!!!!!')
 #else:
     with open('account.txt', 'at') as file:
         file.writelines(str(Account))
@@ -62,7 +65,8 @@ def bank():
         elif choice == '3':
             print(history)
         elif choice == '4':
-            with open('account.txt','at') as file:
+            with open('account.txt','wt') as file:
                 file.writelines(str(Account))
+                exit(0)
         else:
             print('Неверный пункт меню')
