@@ -2,7 +2,7 @@ import os, path
 from path import *
 #import platform
 #import victory
-import bank
+#import bank
 
 Current_dir = os.getcwd()
 history = []
@@ -31,7 +31,8 @@ while choice!='4':
     print('7.играть в викторину;')
     print('8.мой банковский счет;')
     print('4. выход')
-    choice = input('Выберите пункт меню')
+    if __name__=='__main__':
+        choice = input('Выберите пункт меню')
 
     if choice=='5':
         print(creator())
@@ -47,4 +48,6 @@ while choice!='4':
                     file.write(d+'\n')
 
     if choice=='4':
-        exit(4)
+        print('пока-пока!!')
+#def test_creator():
+#    assert creator()=='создатель программы:Рома Боровиков(c)(r)2022'
