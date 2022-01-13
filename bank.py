@@ -27,6 +27,7 @@
 # При выполнении задания можно пользоваться любыми средствами
 # Для реализации основного меню можно использовать пример ниже или написать свой
 import os.path
+import pickle
 
 
 def bank():
@@ -41,6 +42,9 @@ def bank():
     with open('account.txt', 'at') as file:
         file.writelines(str(Account))
     history = ['покупка1,500']
+    if os.path.exists('histoty.txt'):
+        with ('history.txt','rb') as file:
+            history = pickle.loads(file)
     while True:
         print('денег на счету:',Account)
         print('1. пополнение счета')
@@ -56,6 +60,8 @@ def bank():
             sum = int(input('стоимость покупки?'))
             if (sum <= Account):
                 print('Денег достаточно')
+                good = input('название товара?')
+                history.append(good + ',' + str(sum))
                 break
             else:
                 print('недостаточно средств!')
@@ -67,6 +73,8 @@ def bank():
         elif choice == '4':
             with open('account.txt','wt') as file:
                 file.writelines(str(Account))
+                with open('history.txt', 'wb') as file:
+                    pickle.dump(history,file)
                 exit(0)
         else:
             print('Неверный пункт меню')
