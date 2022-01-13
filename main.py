@@ -3,6 +3,7 @@ from path import *
 #import platform
 #import victory
 #import bank
+from bank import bank
 
 Current_dir = os.getcwd()
 history = []
@@ -50,4 +51,7 @@ while choice!='4':
     if choice=='4':
         print('пока-пока!!')
 #def test_creator():
+    if choice=='8':
+        print('пока-пока!!')
+        bank()
 #    assert creator()=='создатель программы:Рома Боровиков(c)(r)2022'
