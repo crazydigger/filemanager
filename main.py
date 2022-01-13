@@ -52,6 +52,6 @@ while choice!='4':
         print('пока-пока!!')
 #def test_creator():
     if choice=='8':
-        print('пока-пока!!')
+        print('Банковский счет!!')
         bank()
 #    assert creator()=='создатель программы:Рома Боровиков(c)(r)2022'

@@ -26,9 +26,17 @@
 # выход из программы
 # При выполнении задания можно пользоваться любыми средствами
 # Для реализации основного меню можно использовать пример ниже или написать свой
+import os.path
+
 
 def bank():
     Account = 0
+    if os.path.exists('account.txt'):
+        with open('account.txt','rt')as file:
+            account=(file.read())
+#else:
+    with open('account.txt', 'at') as file:
+        file.writelines(str(Account))
     history = ['покупка1,500']
     while True:
         print('денег на счету:',Account)
@@ -54,6 +62,7 @@ def bank():
         elif choice == '3':
             print(history)
         elif choice == '4':
-            break
+            with open('account.txt','at') as file:
+                file.writelines(str(Account))
         else:
             print('Неверный пункт меню')
