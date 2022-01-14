@@ -26,7 +26,7 @@ while choice!='4':
     # print("5.создатель программы;")
     # print("remove.удалить (файл/папку);")
     # print("C.reate.Создатьпапку);")
-    print("s. сохранить содержимое папки в файлdir.txtпосмотреть только файлы;")
+    print("s. сохранить содержимое папки в файлlistdir.txt")
 
     #print('7.играть в викторину;')
     print('8.мой банковский счет;')
@@ -41,11 +41,19 @@ while choice!='4':
         print(os.listdir())
 
     if choice == 's':
-        with open('dir.txt','at')as file:
+        list=[]
+        with open('listdir.txt','wt') as file:
             for d in os.listdir(os.getcwd()):
+
+
                 if os.path.isfile(d):
-                    print('file::::::::::::::::::::::::::::', d)
-                    file.write(d+'\n')
+                    file.write('file....' + d + '\n')
+                    list.append(d)
+                if os.path.isdir(d):
+                    file.write('dir....' + d + '\n')
+                    file.write(d + '\n')
+                    list.appen(d)
+            file.writelines(list)
 
     if choice=='4':
         print('пока-пока!!')
