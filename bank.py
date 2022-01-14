@@ -42,7 +42,7 @@ def bank():
     with open('account.txt', 'at') as file:
         file.writelines(str(Account))
     history = ['покупка1,500']
-    if os.path.exists('histoty.txt'):
+    if os.path.exists('history.txt'):
         with ('history.txt','rb') as file:
             history = pickle.loads(file)
     while True:
