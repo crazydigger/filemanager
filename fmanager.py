@@ -1,4 +1,5 @@
 import os, path
+import time
 from path import *
 import platform
 import victory
@@ -8,13 +9,22 @@ Current_dir = os.getcwd()
 history = []
 Account = 0
 
+
 def creator():
+
     return 'создатель программы:Рома Боровиков(c)(r)'
 
-if __name__=="__Main____":
+
+
+def f_manager():
+
+    if __name__ == "__main__":
+
+        choice='4'
     while True:
+        print('Консольный файловый менеджер на питоне!!!!!!!!!!!!!!!!!!!!!')
         print('Текущая папка:' + Current_dir)
-        creator()
+        print(creator())
         print('1. пополнение счета')
         print('2. информация об ОС')
         print('list. просмотр содержимого рабочей директории;')
@@ -23,19 +33,26 @@ if __name__=="__Main____":
         print("remove.удалить (файл/папку);")
         print("C.reate.Создатьпапку);")
         print("f.посмотреть только файлы;")
+        print("s.сохранить содержимое рабочей директории в файл")
 
         print('7.играть в викторину;')
         print('8.мой банковский счет;')
         print('4. выход')
+            # return 'Консольный файловый менеджер на питоне'
+        choice=input('Выберите пункт меню')
 
-    choice = input('Выберите пункт меню')
+
+
+        choice = input('Выберите пункт меню')
+        if choice=='4':
+            exit(4)
     if choice == '1':
         sum = input('на сколько пополнить счет')
         Account += int(sum)
     elif choice == '2':
         print(platform.system())
     elif choice == '5':
-       creator()
+        creator()
     elif choice == '7':
         print('Викторина!')
         victory.victorina()
@@ -77,6 +94,21 @@ if __name__=="__Main____":
     elif choice == '3':
         print(history)
     elif choice == '4':
-        os.exit(0)
+        exit(4)
+        print('выход!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+    elif choice == 's':
+        print('Сохраняем содержимое в dir.txt!!!!!!!!!')
+        time.sleep(1)
+        with open(('dir.txt','wt')) as file:
+            for name in os.listdir(os.getcwd()):
+                file.write(name)
     else:
-        print('Неверный пункт меню')
+            print('Неверный пункт меню')
+
+
+print('Неверный пункт меню')
+
+
+#if __name__ == '__Main':
+print('in main',__name__)
+f_manager()
