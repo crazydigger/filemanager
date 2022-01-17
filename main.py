@@ -54,6 +54,7 @@ while choice!='4':
                     file.write(d + '\n')
                     list.append(d)
             file.writelines(list)
+            print(list)
 
     if choice=='4':
         print('пока-пока!!')
