@@ -52,7 +52,7 @@ while choice!='4':
                 if os.path.isdir(d):
                     file.write('dir....' + d + '\n')
                     file.write(d + '\n')
-                    list.appen(d)
+                    list.append(d)
             file.writelines(list)
 
     if choice=='4':
@@ -61,4 +61,4 @@ while choice!='4':
     if choice=='8':
         print('Банковский счет!!')
         bank()
-#    assert creator()=='создатель программы:Рома Боровиков(c)(r)2022'
+#

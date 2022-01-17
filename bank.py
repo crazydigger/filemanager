@@ -32,21 +32,25 @@ import pickle
 
 def bank():
     Account = 0
+    history = []
     if os.path.exists('account.txt'):
-        with open('account.txt','rt')as file:
-            Account=int(file.read())
-            print('увас'+str(Account)+'руб!')
-            if Account==0:
+        with open('account.txt', 'rt') as file:
+            Account = int(file.read())
+            print('увас' + str(Account) + 'руб!')
+            if Account == 0:
                 print('пополните счет!!!!!!')
-#else:
-    with open('account.txt', 'at') as file:
+    # else:
+    with open('acount.txt', 'at') as file:
         file.writelines(str(Account))
-    history = ['покупка1,500']
+
     if os.path.exists('history.txt'):
-        with ('history.txt','rb') as file:
-            history = pickle.loads(file)
+        print('найдена история покупок!загружаем!')
+        f = open('history.txt', 'rt', encoding='utf8')
+        for l in f:
+            print(l)
+            history.append(l)
     while True:
-        print('денег на счету:',Account)
+        print('денег на счету:', Account)
         print('1. пополнение счета')
         print('2. покупка')
         print('3. история покупок')
@@ -67,14 +71,18 @@ def bank():
                 print('недостаточно средств!')
                 break
                 good = input('название товара?')
-                history.append(good + ','+str(sum))
+                history.append(good + ',' + str(sum))
         elif choice == '3':
-            print(history)
+            if len(history) == 0:
+                print('не было покупок!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                print(history)
         elif choice == '4':
-            with open('account.txt','wt') as file:
+            with open('account.txt', 'wt') as file:
                 file.writelines(str(Account))
-                with open('history.txt', 'wb') as file:
-                    pickle.dump(history,file)
-                exit(0)
+                with open('history.txt', 'at', encoding='utf8') as file:
+                    for l in history:
+                        print(l)
+                        file.write(l + '\n')
+            break
         else:
             print('Неверный пункт меню')
