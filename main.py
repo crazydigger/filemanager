@@ -42,9 +42,9 @@ while choice!='4':
 
     if choice == 's':
         list=[]
-
+        try:
         with open('listdir.txt','wt') as file:
-
+            exception as e:
             print('проблема с открытием файла',e)
             for d in os.listdir(os.getcwd()):
 
