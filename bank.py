@@ -59,7 +59,11 @@ def bank():
         choice = input('Выберите пункт меню')
         if choice == '1':
             sum = input('на сколько пополнить счет')
-            Account += int(sum)
+            try:
+                Account += int(sum)
+            except:
+            print('введите число!')
+            break
         elif choice == '2':
             sum = int(input('стоимость покупки?'))
             if (sum <= Account):
